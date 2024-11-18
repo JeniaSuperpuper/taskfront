@@ -1,0 +1,364 @@
+
+
+.modal {
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition:  0.5s all ease;
+}
+
+.modal.active {
+  z-index: 11;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__content {
+  z-index: 11;
+  padding: 20px;
+  border-radius: 12px;
+  transform: scale(0.5);
+  transition:  0.5s all ease;
+}
+
+.modal__content.active {
+  transform: scale(1);
+  z-index: 11;
+}
+
+/* Header.css */
+
+/* Общие стили для шапки */
+.Header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для кнопок */
+.button {
+  all: unset;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.button:active {
+  background-color: #3e8e41;
+}
+
+/* LoginForm.css */
+
+/* Общие стили для формы */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form__title {
+  color: #333;
+  font-size: 32px;
+}
+
+/* Стили для меток */
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Стили для полей ввода */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button[type="submit"]:active {
+  background-color: #3e8e41;
+}
+
+/* Стили для сообщения об ошибке */
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* ProjectList.css */
+
+/* Общие стили для контейнера */
+.project-list-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Стили для списка */
+.project-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Стили для элементов списка */
+.project-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Стили для заголовков */
+.project-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Стили для параграфов */
+.project-item p {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Стили для сообщения об ошибке */
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* TaskList.css */
+
+/* Общие стили для контейнера */
+.task-list-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Стили для списка */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Стили для элементов списка */
+.task-item {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Стили для заголовков */
+.task-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Стили для параграфов */
+.task-item p {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Стили для статуса и приоритета */
+.task-item .status,
+.task-item .priority {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.task-item .status::before,
+.task-item .priority::before {
+  content: attr(data-label) ": ";
+  font-weight: bold;
+}
+
+/* Стили для ответственного за тестирование */
+.task-item .responsible-for-test {
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+.task-item .responsible-for-test::before {
+  content: "Ответственный за тестирование: ";
+  font-weight: bold;
+}
+
+/* Стили для сообщения об ошибке */
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* Стили для кнопки возврата */
+.back-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #45a049;
+}
+
+.back-button:active {
+  background-color: #3e8e41;
+}
+
+.CommentForm {
+  margin-left: 900px;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+}
+
+.delete-button:hover {
+  background-color: #e60000;
+}
+
+.buttons_wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.add-comment-form {
+  background-color: #fff;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+}
+
+.comment_wrap {
+  margin-top: 30px;
+}
+
+.comment {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 80%;
+}
+
+.comment_label {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+}
+
+.comment_button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.admin_buttons_wrap {
+  position: absolute;
+  left: 20px;
+}
+
+.sort_by {
+  width: 35%;
+}
+.label_sort {
+  margin-right: 15px;
+}
+
+.message__block {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 200px;
+}
+
+
+
+.mesage__block {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  width: 400px;
+}
+
+.message_text {
+  color: #000;
+}
