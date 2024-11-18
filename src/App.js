@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/header';
 
 function App() {
+  // Хуй
   const [selectedProjectId, setSelectedProjectId] = useState(null);
 
 
